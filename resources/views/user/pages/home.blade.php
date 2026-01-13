@@ -26,8 +26,8 @@
             </a>
 
             <h2 class="text-4xl md:text-xl font-bold leading-tight">
-                <br>Akses Informasi Terbaru dan Terlengkap Mengenai<br>
-                PT Gerbang NTB Emas Sekarang
+                <br>Menyediakan Produk Manufaktur dan Konstruksi<br>
+                untuk Proyek Infrastruktur dan Kebutuhan Masyarakat
             </h2>
         </div>
     </div>
@@ -82,6 +82,88 @@
                 Read More About Us
             </a>
         </div>
+    </div>
+</section>
+
+{{-- WHY CHOOSE US --}}
+<section class="bg-gray-50 py-24">
+    <div class="max-w-7xl mx-auto px-6">
+
+        {{-- HEADER --}}
+        <div class="text-center max-w-2xl mx-auto">
+            <span class="text-red-700 text-sm font-semibold uppercase">
+                Why Choose Us
+            </span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-3">
+                Alasan Memilih PT Gerbang NTB Emas
+            </h2>
+            <p class="mt-4 text-gray-600">
+                Kami hadir sebagai mitra terpercaya dalam penyediaan produk
+                manufaktur dan konstruksi untuk berbagai kebutuhan.
+            </p>
+        </div>
+
+        {{-- CONTENT --}}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+
+            {{-- ITEM 1 --}}
+            <div class="bg-white rounded-xl p-8 text-center shadow-sm hover:shadow-md transition">
+                <div class="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-red-700 text-white text-2xl">
+                    🏗️
+                </div>
+                <h3 class="mt-6 font-bold text-lg">
+                    Produk Berkualitas
+                </h3>
+                <p class="mt-3 text-sm text-gray-600 leading-relaxed">
+                    Menggunakan material dan proses produksi yang terstandar
+                    untuk memastikan kualitas dan ketahanan produk.
+                </p>
+            </div>
+
+            {{-- ITEM 2 --}}
+            <div class="bg-white rounded-xl p-8 text-center shadow-sm hover:shadow-md transition">
+                <div class="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-red-700 text-white text-2xl">
+                    🤝
+                </div>
+                <h3 class="mt-6 font-bold text-lg">
+                    Mitra Terpercaya
+                </h3>
+                <p class="mt-3 text-sm text-gray-600 leading-relaxed">
+                    Dipercaya oleh berbagai mitra dan proyek di sektor
+                    konstruksi dan manufaktur.
+                </p>
+            </div>
+
+            {{-- ITEM 3 --}}
+            <div class="bg-white rounded-xl p-8 text-center shadow-sm hover:shadow-md transition">
+                <div class="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-red-700 text-white text-2xl">
+                    🚚
+                </div>
+                <h3 class="mt-6 font-bold text-lg">
+                    Distribusi Fleksibel
+                </h3>
+                <p class="mt-3 text-sm text-gray-600 leading-relaxed">
+                    Melayani kebutuhan proyek skala besar maupun pembelian
+                    personal dengan pengiriman yang terencana.
+                </p>
+            </div>
+
+            {{-- ITEM 4 --}}
+            <div class="bg-white rounded-xl p-8 text-center shadow-sm hover:shadow-md transition">
+                <div class="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-red-700 text-white text-2xl">
+                    🧑‍💼
+                </div>
+                <h3 class="mt-6 font-bold text-lg">
+                    Tim Profesional
+                </h3>
+                <p class="mt-3 text-sm text-gray-600 leading-relaxed">
+                    Didukung oleh tim berpengalaman yang siap memberikan
+                    solusi dan layanan terbaik.
+                </p>
+            </div>
+
+        </div>
+
     </div>
 </section>
 
@@ -171,7 +253,7 @@
 {{-- APPROVED VENDORS --}}
 <section class="bg-white py-16">
     <div class="max-w-7xl mx-auto px-6 text-center">
-        <h2 class="text-2xl font-bold mb-8">Mitra</h2>
+        <h2 class="text-2xl font-bold mb-8">Dipercaya oleh Berbagai Mitra & Proyek</h2>
 
         <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
             @foreach(range(1,5) as $vendor)
