@@ -5,7 +5,7 @@
 @section('content')
 
 {{-- HERO --}}
-<section class="relative min-h-[85vh] md:min-h-[90vh] text-white flex items-center pt-32">
+<section class="relative min-h-[85vh] md:min-h-[45vh] text-white flex items-center pt-32">
 
     {{-- BACKGROUND --}}
     <div class="absolute inset-0 bg-gray-900"></div>
@@ -33,7 +33,7 @@
             </span>
 
             <h2 class="text-3xl font-bold mt-4">
-                Mengenal Lebih Dekat PT Gerbang NTB Emas
+                Mengenal Lebih Dekat PT. Gerbang NTB Emas
             </h2>
 
             <p class="mt-6 text-gray-600 leading-relaxed">
@@ -75,90 +75,73 @@
         <div class="relative">
 
             {{-- TRACK --}}
-            <div class="absolute top-1/2 left-0 right-0 h-1 bg-red-200"></div>
+            <div class="absolute top-7 left-0 right-0 h-1 bg-red-200"></div>
 
             {{-- ITEMS --}}
-            <div class="relative flex gap-16 overflow-x-auto md:overflow-visible pb-6">
+            <div class="relative grid grid-cols-5 gap-8">
 
                 {{-- ITEM --}}
-                <div class="min-w-[260px] relative">
-                    <div class="flex flex-col items-center text-center">
-                        <div class="w-14 h-14 rounded-full bg-red-700 text-white flex items-center justify-center font-bold">
-                            1957
-                        </div>
-                        <div class="mt-6 bg-white p-5 rounded-xl shadow-sm">
-                            <p class="text-sm text-gray-600">
-                                Departemen Perindustrian membentuk
-                                Induk Pande Besi Lombok di Mataram.
-                            </p>
-                        </div>
-                    </div>
+                <div class="flex flex-col items-center text-center">
+                <div class="w-14 h-14 rounded-full bg-red-700 text-white flex items-center justify-center font-bold">
+                    1957
+                </div>
+                <div class="mt-6 bg-white p-5 rounded-xl shadow-sm">
+                    <p class="text-sm text-gray-600">
+                    Departemen Perindustrian membentuk Induk Pande Besi Lombok di Mataram.
+                    </p>
+                </div>
                 </div>
 
                 {{-- ITEM --}}
-                <div class="min-w-[260px] relative mt-16">
-                    <div class="flex flex-col items-center text-center">
-                        <div class="w-14 h-14 rounded-full bg-red-700 text-white flex items-center justify-center font-bold">
-                            1961
-                        </div>
-                        <div class="mt-6 bg-white p-5 rounded-xl shadow-sm">
-                            <p class="text-sm text-gray-600">
-                                Berubah nama menjadi Perusahaan Negara
-                                Perindustrian Rakyat (PNPR) Wisaya Yasa.
-                            </p>
-                        </div>
-                    </div>
+                <div class="flex flex-col items-center text-center">
+                <div class="w-14 h-14 rounded-full bg-red-700 text-white flex items-center justify-center font-bold">
+                    1961
+                </div>
+                <div class="mt-6 bg-white p-5 rounded-xl shadow-sm">
+                    <p class="text-sm text-gray-600">
+                    Berubah nama menjadi PNPR Wisaya Yasa.
+                    </p>
+                </div>
                 </div>
 
                 {{-- ITEM --}}
-                <div class="min-w-[260px] relative">
-                    <div class="flex flex-col items-center text-center">
-                        <div class="w-14 h-14 rounded-full bg-red-700 text-white flex items-center justify-center font-bold">
-                            1969
-                        </div>
-                        <div class="mt-6 bg-white p-5 rounded-xl shadow-sm">
-                            <p class="text-sm text-gray-600">
-                                Diubah menjadi Perusahaan Daerah
-                                Tingkat 1 Unit Logam.
-                            </p>
-                        </div>
-                    </div>
+                <div class="flex flex-col items-center text-center">
+                <div class="w-14 h-14 rounded-full bg-red-700 text-white flex items-center justify-center font-bold">
+                    1969
+                </div>
+                <div class="mt-6 bg-white p-5 rounded-xl shadow-sm">
+                    <p class="text-sm text-gray-600">
+                    Menjadi Perusahaan Daerah Tingkat 1 Unit Logam.
+                    </p>
+                </div>
                 </div>
 
                 {{-- ITEM --}}
-                <div class="min-w-[260px] relative mt-16">
-                    <div class="flex flex-col items-center text-center">
-                        <div class="w-14 h-14 rounded-full bg-red-700 text-white flex items-center justify-center font-bold">
-                            1980
-                        </div>
-                        <div class="mt-6 bg-white p-5 rounded-xl shadow-sm">
-                            <p class="text-sm text-gray-600">
-                                Berstatus otonomi dengan nama
-                                PD Wisaya Yasa.
-                            </p>
-                        </div>
-                    </div>
+                <div class="flex flex-col items-center text-center">
+                <div class="w-14 h-14 rounded-full bg-red-700 text-white flex items-center justify-center font-bold">
+                    1980
+                </div>
+                <div class="mt-6 bg-white p-5 rounded-xl shadow-sm">
+                    <p class="text-sm text-gray-600">
+                    Berstatus otonomi dengan nama PD Wisaya Yasa.
+                    </p>
+                </div>
                 </div>
 
                 {{-- ITEM --}}
-                <div class="min-w-[260px] relative">
-                    <div class="flex flex-col items-center text-center">
-                        <div class="w-14 h-14 rounded-full bg-red-700 text-white flex items-center justify-center font-bold">
-                            2006
-                        </div>
-                        <div class="mt-6 bg-white p-5 rounded-xl shadow-sm">
-                            <p class="text-sm text-gray-600">
-                                Berdasarkan PERDA No. 2 Tahun 2006,
-                                PD Wisaya Yasa berubah menjadi
-                                <strong>PT Gerbang NTB Emas</strong>.
-                            </p>
-                        </div>
-                    </div>
+                <div class="flex flex-col items-center text-center">
+                <div class="w-14 h-14 rounded-full bg-red-700 text-white flex items-center justify-center font-bold">
+                    2006
+                </div>
+                <div class="mt-6 bg-white p-5 rounded-xl shadow-sm">
+                    <p class="text-sm text-gray-600">
+                    Berubah menjadi <strong>PT Gerbang NTB Emas</strong>.
+                    </p>
+                </div>
                 </div>
 
             </div>
         </div>
-
     </div>
 </section>
 
@@ -172,9 +155,8 @@
                 Visi
             </h3>
             <p class="mt-4 text-gray-600 leading-relaxed">
-                Menjadi perusahaan manufaktur dan konstruksi yang
-                profesional, berdaya saing, dan berkontribusi dalam
-                pembangunan berkelanjutan.
+                Menjadi Perseroan Terbatas (PT) kompetitif dan Gemilang 
+                untuk mendorong industrialisasi pembangunan daerah.
             </p>
         </div>
 
@@ -184,9 +166,12 @@
                 Misi
             </h3>
             <ul class="mt-4 space-y-3 text-gray-600 list-disc list-inside">
-                <li>Menyediakan produk berkualitas dan terstandar</li>
-                <li>Melayani kebutuhan proyek dan masyarakat secara profesional</li>
-                <li>Mengembangkan sumber daya manusia yang kompeten</li>
+                <li>Menghadirkan manajemen tata kerja perusahaan yang kompeten, sistematis, dan profesional</li>
+                <li>Membangun perusahaan yang sehat, bersih, efektif, dan membangun kepercayaan publik melalui reformasi sistem kerja transparan</li>
+                <li>Membangun bisnis berbasis potensi daerah dan peluang pasar yang secara nyata berdampak pada perluasan lapangan usaha dan penciptaan lapangan kerja</li>
+                <li>Mengembangkan perusahaan yang mempunyai daya saing kompetitif dan menghasilkan profit yang tinggi bagi perusahaan dan pemegang saham</li>
+                <li>Meningkatkan kualitas hidup dengan membangun program rumah terjangkau dan rumah bersubsidi (program rumah gemilang)</li>
+                <li>Membangun jaringan distribusi dan pemasaran di setiap kabupaten dengan cabang-cabang penjualan hingga ke desa sebagai bentuk penguasaan market bagi bisnis GNE dimasa depan dalam bentuk Ownership Jaringan  Bisnis Ritel dan Grosir Provinsi NTB</li>
             </ul>
         </div>
 
@@ -206,7 +191,7 @@
             </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-16">
+        <div class="grid grid-cols-3 md:grid-cols-1 gap-5 mt-16">
 
             @foreach(range(1,3) as $item)
             <div class="text-center">

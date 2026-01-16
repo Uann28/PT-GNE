@@ -1,3 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .sector-btn {
+        @apply px-6 py-3 rounded-full border font-semibold transition;
+    }
+
+    .sector-btn.active {
+        @apply bg-red-700 text-white border-red-700;
+    }
+
+    .variant {
+        @apply px-4 py-3 border rounded-lg text-sm cursor-pointer transition;
+    }
+
+    .variant:hover {
+        @apply border-red-600;
+    }
+}
+
+.thumb {
+    @apply h-16 w-20 cursor-pointer rounded-lg border border-gray-200 object-cover transition;
+}
+
+.thumb.active {
+    @apply border-red-600;
+}
+
+.accordion {
+    @apply rounded-xl border border-gray-200 bg-white;
+}
+
+.accordion-btn {
+    @apply flex w-full items-center justify-between px-5 py-4 text-sm font-semibold text-gray-900;
+}
+
+.accordion-content {
+    @apply hidden border-t px-5 py-4 text-sm text-gray-600;
+}
+
+.accordion.open .accordion-content {
+    @apply block;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
