@@ -181,7 +181,7 @@
         {{-- SLIDER --}}
         <div
             id="product-slider"
-            class="mt-12 flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory px-[10%] scrollbar-hide"
+            class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory py-6 scrollbar-hide"
         >
 
             @php
@@ -199,10 +199,6 @@
                         'desc' => 'Struktur beton pracetak untuk jembatan dan gorong-gorong.',
                     ],
                     [
-                        'name' => 'Batu Split',
-                        'desc' => 'Material agregat untuk proyek konstruksi.',
-                    ],
-                    [
                         'name' => 'Alat Berat',
                         'desc' => 'Dukungan alat konstruksi untuk berbagai skala proyek.',
                     ],
@@ -211,7 +207,7 @@
 
             @foreach($products as $product)
             <div
-                class="min-w-[80%] md:min-w-[60%] bg-white text-gray-800 rounded-xl p-8 snap-center flex gap-6 items-center"
+                class="min-w-[280px] md:min-w-[360px] lg:min-w-[420px] bg-white text-gray-800 rounded-xl p-8 snap-center flex gap-6 items-center"
             >
                 {{-- IMAGE (KIRI) --}}
                 <div class="w-40 h-32 bg-gray-300 rounded-lg flex-shrink-0"></div>
@@ -237,15 +233,39 @@
         </div>
 
         {{-- INDICATOR DOTS --}}
-        <div class="flex justify-center mt-6 gap-2" id="slider-dots">
-            @foreach($products as $index => $product)
-                <span
-                    class="w-2.5 h-2.5 rounded-full bg-white/40 transition-all duration-300"
-                    data-index="{{ $index }}"
-                ></span>
-            @endforeach
-        </div>
+        <div class="flex justify-center items-center gap-6 mt-6">
 
+            {{-- LEFT ARROW --}}
+            <button
+                id="prevBtn"
+                onclick="slideProducts(-1)"
+                class="w-9 h-9 rounded-full bg-white text-red-700 shadow
+                    flex items-center justify-center hover:bg-gray-100"
+            >
+                ‹
+            </button>
+
+            {{-- DOTS --}}
+            <div class="flex gap-2" id="slider-dots">
+                @foreach($products as $index => $product)
+                    <button
+                        class="w-2.5 h-2.5 rounded-full bg-white/40 transition-all duration-300"
+                        onclick="goToSlide({{ $index }})"
+                    ></button>
+                @endforeach
+            </div>
+
+            {{-- RIGHT ARROW --}}
+            <button
+                id="nextBtn"
+                onclick="slideProducts(1)"
+                class="w-9 h-9 rounded-full bg-white text-red-700 shadow
+                    flex items-center justify-center hover:bg-gray-100"
+            >
+                ›
+            </button>
+
+        </div>
     </div>
 </section>
 
@@ -263,35 +283,98 @@
     </div>
 </section>
 
-{{-- Section --}}
-<section class="relative bg-gray-900 text-white py-24">
+{{-- NEWS / BERITA --}}
+<section class="bg-gray-50 py-24">
+    <div class="max-w-7xl mx-auto px-6">
 
-    {{-- OVERLAY --}}
-    <div class="absolute inset-0 bg-black/70"></div>
-
-    <div class="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-
-        {{-- LEFT CONTENT --}}
-        <div>
-            <h2 class="text-3xl md:text-4xl font-bold leading-tight">
-                We're proud to be a useful and valuable partner
-                to our customers and communities
+        {{-- HEADER --}}
+        <div class="text-center max-w-2xl mx-auto">
+            <span class="text-red-700 text-sm font-semibold uppercase">
+                Berita & Informasi
+            </span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-3">
+                Kabar Terbaru dari Kami
             </h2>
-
-            <a href="{{ route('contact') }}"
-               class="inline-block mt-8 bg-red-700 hover:bg-red-800 px-8 py-3 rounded-full font-semibold">
-                Contact Us
-            </a>
+            <p class="mt-4 text-gray-600">
+                Informasi terkini seputar kegiatan, proyek, dan perkembangan
+                PT Gerbang NTB Emas.
+            </p>
         </div>
 
-        {{-- RIGHT IMAGES --}}
-        <div class="grid grid-cols-2 gap-4">
-            <div class="bg-gray-300 h-56"></div>
-            <div class="bg-gray-400 h-56 mt-10"></div>
-        </div>
+        {{-- LIST BERITA --}}
+        <div class="grid gap-8 mt-16 md:grid-cols-2 lg:grid-cols-3">
 
+            @php
+                // sementara dummy, nanti ganti dari backend
+                $news = [
+                    [
+                        'title' => 'Produksi Paving Block Meningkat',
+                        'excerpt' => 'Peningkatan kapasitas produksi untuk memenuhi kebutuhan proyek infrastruktur daerah.',
+                        'image' => null,
+                        'slug' => '#',
+                        'date' => '2024-06-01'
+                    ],
+                    [
+                        'title' => 'Distribusi Produk ke Lombok Timur',
+                        'excerpt' => 'Pengiriman produk beton pracetak untuk mendukung pembangunan wilayah Lombok Timur.',
+                        'image' => null,
+                        'slug' => '#',
+                        'date' => '2024-05-20'
+                    ],
+                    [
+                        'title' => 'Komitmen Mutu & Standar Produksi',
+                        'excerpt' => 'PT Gerbang NTB Emas terus menjaga kualitas melalui standar produksi berkelanjutan.',
+                        'image' => null,
+                        'slug' => '#',
+                        'date' => '2024-05-10'
+                    ],
+                ];
+            @endphp
+
+            @foreach($news as $item)
+            <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+
+                {{-- IMAGE --}}
+                <div class="h-48 bg-gray-200 flex items-center justify-center">
+                    @if($item['image'])
+                        <img
+                            src="{{ asset('storage/'.$item['image']) }}"
+                            alt="{{ $item['title'] }}"
+                            class="w-full h-full object-cover">
+                    @else
+                        <span class="text-gray-400 text-sm">
+                            Image Berita
+                        </span>
+                    @endif
+                </div>
+
+                {{-- CONTENT --}}
+                <div class="p-6">
+                    <span class="text-xs text-gray-500">
+                        {{ \Carbon\Carbon::parse($item['date'])->format('d M Y') }}
+                    </span>
+
+                    <h3 class="mt-2 font-bold text-lg leading-snug">
+                        {{ $item['title'] }}
+                    </h3>
+
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">
+                        {{ $item['excerpt'] }}
+                    </p>
+
+                    <a href="{{ $item['slug'] }}"
+                       class="inline-block mt-4 text-sm font-semibold text-red-700">
+                        Baca Selengkapnya →
+                    </a>
+                </div>
+
+            </article>
+            @endforeach
+
+        </div>
     </div>
 </section>
+
 
 {{-- CONTACT & LOCATION --}}
 <section class="bg-white py-20">

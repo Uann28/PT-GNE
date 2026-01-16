@@ -10,7 +10,7 @@
     @vite('resources/css/app.css')
 
     {{-- Optional: future JS --}}
-    @vite('resources/js/app.js')
+    @vite(['resources/css/products.css', 'resources/js/products.js'])
 </head>
 <body class="bg-white text-gray-800 antialiased">
 
